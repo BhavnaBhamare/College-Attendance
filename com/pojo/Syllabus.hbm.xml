@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Feb, 2017 10:54:23 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Syllabus" table="syllabus" catalog="erpcollege">
+        <id name="syllabusId" type="java.lang.Integer">
+            <column name="syllabusId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="teacherdetail" class="com.pojo.Teacherdetail" fetch="select">
+            <column name="syllabusTcherId" />
+        </many-to-one>
+        <property name="syllabusClass" type="string">
+            <column name="syllabusClass" />
+        </property>
+        <property name="syllabusSubject" type="string">
+            <column name="syllabusSubject" />
+        </property>
+        <property name="syllabusModules" type="string">
+            <column name="syllabusModules" />
+        </property>
+        <property name="syllabusChapters" type="string">
+            <column name="syllabusChapters" />
+        </property>
+        <property name="syllabusChapSubPoint" type="string">
+            <column name="syllabusChapSubPoint" length="1000" />
+        </property>
+        <property name="syllabusPracticals" type="string">
+            <column name="syllabusPracticals" length="1000" />
+        </property>
+        <property name="syllabusTotalHours" type="string">
+            <column name="syllabusTotalHours" />
+        </property>
+        <property name="syllabusDate" type="date">
+            <column name="syllabusDate" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

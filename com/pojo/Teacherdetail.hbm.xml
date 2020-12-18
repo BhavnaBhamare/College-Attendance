@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Feb, 2017 10:54:23 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Teacherdetail" table="teacherdetail" catalog="erpcollege">
+        <id name="teacherId" type="java.lang.Integer">
+            <column name="teacherId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="department" class="com.pojo.Department" fetch="select">
+            <column name="tcherDeptId" />
+        </many-to-one>
+        <many-to-one name="subject" class="com.pojo.Subject" fetch="select">
+            <column name="tcherSubjectId" />
+        </many-to-one>
+        <property name="tcherFirstName" type="string">
+            <column name="tcherFirstName" />
+        </property>
+        <property name="tcherMiddleName" type="string">
+            <column name="tcherMiddleName" />
+        </property>
+        <property name="tcherLastName" type="string">
+            <column name="tcherLastName" />
+        </property>
+        <property name="tcherEmailId" type="string">
+            <column name="tcherEmailId" />
+        </property>
+        <property name="tcherPassword" type="string">
+            <column name="tcherPassword" />
+        </property>
+        <property name="tcherGender" type="string">
+            <column name="tcherGender" />
+        </property>
+        <property name="tcherPhoneNumber" type="string">
+            <column name="tcherPhoneNumber" />
+        </property>
+        <property name="tcherPeremanantAddress" type="string">
+            <column name="tcherPeremanantAddress" />
+        </property>
+        <property name="tcherQualification" type="string">
+            <column name="tcherQualification" />
+        </property>
+        <property name="tcherPreviousCollegeName" type="string">
+            <column name="tcherPreviousCollegeName" />
+        </property>
+        <property name="tcherSalary" type="java.lang.Double">
+            <column name="tcherSalary" precision="22" scale="0" />
+        </property>
+        <property name="tcherExperience" type="string">
+            <column name="tcherExperience" />
+        </property>
+        <set name="notices" table="notice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="noticeTeacherId" />
+            </key>
+            <one-to-many class="com.pojo.Notice" />
+        </set>
+        <set name="assignments" table="assignment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="assignTeacherId" />
+            </key>
+            <one-to-many class="com.pojo.Assignment" />
+        </set>
+        <set name="syllabuses" table="syllabus" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="syllabusTcherId" />
+            </key>
+            <one-to-many class="com.pojo.Syllabus" />
+        </set>
+        <set name="examtransactions" table="examtransaction" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="examTransTeacherId" />
+            </key>
+            <one-to-many class="com.pojo.Examtransaction" />
+        </set>
+        <set name="timetables" table="timetable" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="timeTableTeacherId" />
+            </key>
+            <one-to-many class="com.pojo.Timetable" />
+        </set>
+        <set name="attendances" table="attendance" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="attndTeacherId" />
+            </key>
+            <one-to-many class="com.pojo.Attendance" />
+        </set>
+    </class>
+</hibernate-mapping>

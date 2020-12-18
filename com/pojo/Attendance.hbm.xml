@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Feb, 2017 10:54:23 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Attendance" table="attendance" catalog="erpcollege">
+        <id name="attndId" type="java.lang.Integer">
+            <column name="attndId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="studentdetail" class="com.pojo.Studentdetail" fetch="select">
+            <column name="attndStudId" />
+        </many-to-one>
+        <many-to-one name="teacherdetail" class="com.pojo.Teacherdetail" fetch="select">
+            <column name="attndTeacherId" />
+        </many-to-one>
+        <many-to-one name="classdetail" class="com.pojo.Classdetail" fetch="select">
+            <column name="attndClassId" />
+        </many-to-one>
+        <many-to-one name="subject" class="com.pojo.Subject" fetch="select">
+            <column name="attndSubjectId" />
+        </many-to-one>
+        <property name="attndType" type="string">
+            <column name="attndType" />
+        </property>
+        <property name="attndStaus" type="string">
+            <column name="attndStaus" />
+        </property>
+        <property name="attndDate" type="date">
+            <column name="attndDate" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

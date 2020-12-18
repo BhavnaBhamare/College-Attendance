@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Feb, 2017 10:54:23 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Examtransaction" table="examtransaction" catalog="erpcollege">
+        <id name="examTransId" type="java.lang.Integer">
+            <column name="examTransId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="studentdetail" class="com.pojo.Studentdetail" fetch="select">
+            <column name="examTransStudId" />
+        </many-to-one>
+        <many-to-one name="subject" class="com.pojo.Subject" fetch="select">
+            <column name="examTransSubjectId" />
+        </many-to-one>
+        <many-to-one name="examtype" class="com.pojo.Examtype" fetch="select">
+            <column name="examTransExamTypeId" />
+        </many-to-one>
+        <many-to-one name="teacherdetail" class="com.pojo.Teacherdetail" fetch="select">
+            <column name="examTransTeacherId" />
+        </many-to-one>
+        <property name="examTransDate" type="date">
+            <column name="examTransDate" length="0" />
+        </property>
+        <property name="examTransThObtMark" type="java.lang.Integer">
+            <column name="examTransThObtMark" />
+        </property>
+        <property name="examTransThOutOfMark" type="java.lang.Integer">
+            <column name="examTransThOutOfMark" />
+        </property>
+        <property name="examTransPractObtMark" type="java.lang.Integer">
+            <column name="examTransPractObtMark" />
+        </property>
+        <property name="examTransPractOutOfMark" type="java.lang.Integer">
+            <column name="examTransPractOutOfMark" />
+        </property>
+        <property name="examTransTotalObtMark" type="java.lang.Integer">
+            <column name="examTransTotalObtMark" />
+        </property>
+        <property name="examTransTotalOutOfMark" type="java.lang.Integer">
+            <column name="examTransTotalOutOfMark" />
+        </property>
+        <property name="examTransPercentage" type="java.lang.Double">
+            <column name="examTransPercentage" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Feb, 2017 10:54:23 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Studentdetail" table="studentdetail" catalog="erpcollege">
+        <id name="studId" type="java.lang.Integer">
+            <column name="studId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="classdetail" class="com.pojo.Classdetail" fetch="select">
+            <column name="studClass" />
+        </many-to-one>
+        <many-to-one name="yeardetail" class="com.pojo.Yeardetail" fetch="select">
+            <column name="studYearId" />
+        </many-to-one>
+        <many-to-one name="division" class="com.pojo.Division" fetch="select">
+            <column name="studDivId" />
+        </many-to-one>
+        <property name="studEnrollmentN" type="string">
+            <column name="studEnrollmentN" />
+        </property>
+        <property name="studName" type="string">
+            <column name="studName" />
+        </property>
+        <set name="attendances" table="attendance" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="attndStudId" />
+            </key>
+            <one-to-many class="com.pojo.Attendance" />
+        </set>
+        <set name="timetables" table="timetable" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="timeTableStudId" />
+            </key>
+            <one-to-many class="com.pojo.Timetable" />
+        </set>
+        <set name="examtransactions" table="examtransaction" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="examTransStudId" />
+            </key>
+            <one-to-many class="com.pojo.Examtransaction" />
+        </set>
+    </class>
+</hibernate-mapping>
