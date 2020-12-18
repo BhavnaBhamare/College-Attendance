@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title> Admin </title>
+  <title> Hostel Application Form </title>
 
   <!-- Bootstrap core CSS -->
 
@@ -57,7 +57,7 @@
         <div class="left_col scroll-view">
 
           <div class="navbar nav_title" style="border: 0;">
-            <a href="ADMINDASH.jsp" class="site_title"><i class="fa fa-paw"></i> <span>Admin</span></a>
+            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>HOSTEL</span></a>
           </div>
           <div class="clearfix"></div>
 
@@ -69,7 +69,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
-              <h2>${adminLogin.adminEmail}</h2>
+              <h2>John Doe</h2>
             </div>
           </div>
           <!-- /menu prile quick info -->
@@ -80,126 +80,15 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
             <div class="menu_section">
-              <h3>To Admin Dash</h3>
+              <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-plus-circle"></i> Admission <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-home"></i> Hostel <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="AdminAprovalForAdmitn.jsp">Approved List</a>
-                    
+                    <li><a href="HostelStudentFormOne.jsp">Registration Form</a>
+                    </li>
+                     <li><a href="#">Hostel & Mess Details</a>
                     </li>
                   </ul>
-                </li>
-                
-                 </ul>
-                
-                
-                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Hostel <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="AdminHostelRoomApplicationList.jsp">Application List</a>
-                    <li><a href="AdminListAllotHostelMess.jsp">Hostel RoomAllot & Mess Reg</a>
-                    <li><a href="MessAttendance.jsp">Mess Attendance</a>
-                    <li><a href="HostelAttendance.jsp">Hostel Attendance</a>
-                    </li>
-                   </ul>
-                     </ul>
-                  
-                  
-                   <ul class="nav side-menu">
-                  <li><a><i class="fa fa-pencil-square-o"></i> Exam <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="index.html">Approved List</a>
-                    <li><a href="index.html">Registration Form</a> 
-                    </li>
-                  </ul>
-                  </ul>
-                  
-                </li>
-                
-                
-                <ul class="nav side-menu">
-                 <li><a><i class="fa fa-car"></i> Transport <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="index.html">Add Bus Detail </a>
-                    <li><a href="index.html">Add Bus Driver Details</a> 
-                    </li>
-                  </ul>
-                </li>
-               </ul>
-             
-             
-              <ul class="nav side-menu">
-                 <li><a><i class="fa fa-calendar"></i> Holidays And Events <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="HolidaysADD.jsp">Holidays Add </a>
-                    <li><a href="HolidayList.jsp">Holiday List</a> 
-                    <li><a href="EventsADD.jsp">Event Add</a> 
-                    <li><a href="EventList.jsp">Event List</a> 
-                    </li>
-                  </ul>
-                </li>
-               </ul>
-             
-             
-             <ul class="nav side-menu">
-                 <li><a><i class="fa fa-music"></i> Music <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="AddMusicDetails.jsp">Student Admission for Music Class</a>
-                    <li><a href="ViewMusicDetails.jsp">View All Student</a> 
-                    </li>
-                  </ul>
-                </li>
-               </ul>
-             
-             
-             <ul class="nav side-menu">
-                 <li><a><i class="fa fa-users"></i> Dance <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="AddDanceDetails.jsp">Student Admission for Dance Class</a>
-                    <li><a href="ViewDanceDetails.jsp">View All Student</a> 
-                    </li>
-                  </ul>
-                </li>
-               </ul>
-               
-               
-               <ul class="nav side-menu">
-                 <li><a><i class="fa fa-futbol-o"></i> Sport <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="AddSportsDetails.jsp">Student Admission for Sport Class</a>
-                    <li><a href="ViewSportsDetails.jsp">View All Student</a> 
-                    </li>
-                  </ul>
-                </li>
-               </ul>
-             
-             
-               <ul class="nav side-menu">
-                 <li><a><i class="fa fa-pencil-square-o"></i> Examination <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="AdminExTimeTable1.jsp">Exam Schedule</a>
-                    <li><a href="#">View Schedule</a> 
-                    </li>
-                  </ul>
-                </li>
-               </ul>
-             
-             
-             <ul class="nav side-menu">
-                 <li><a><i class="fa fa-child"></i>Employee <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display: none">
-                    <li><a href="EmployeeADD.jsp">Add New Employee</a>
-                    <li><a href="TeacherAttendance.jsp">Attendance</a>
-                    <li><a href="AllEmployeeList.jsp">View All Employees</a> 
-                    </li>
-                  </ul>
-                </li>
-               </ul>
-             
-             
-             
-             
-                  
                 </li>
                 
               </ul>
@@ -238,15 +127,17 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img src="images/img.jpg" alt="">${adminLogin.adminEmail}
+                  <img src="images/img.jpg" alt="">John Doe
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
                   <li><a href="javascript:;">  Profile</a>
                   </li>
                  
-                 
-                  <li><a href="Login.jsp"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  <li>
+                    <a href="javascript:;">Help</a>
+                  </li>
+                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </li>
                 </ul>
               </li>
